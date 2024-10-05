@@ -1,0 +1,32 @@
+body {
+    background: rgba(0, 103, 75, 0.6);
+    color: #ffffff;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  h1, h2 {
+    color: #025738;
+  }
+  
+  #survey-form {
+    background: rgba(0, 255, 255, 0.3); /* Cyan color with 30% opacity */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff; /* Text color inside the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  }
+  
+  .form-label {
+    font-weight: 600;
+  }
+  
+  #submit {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #submit:hover {
+    background-color: #0056b3;
+  }
+  

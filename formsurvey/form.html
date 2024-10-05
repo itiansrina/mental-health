@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Mental Health Survey Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+  <div class="container my-5">
+    <header class="text-center mb-4">
+      <h1 id="title" class="display-4">Mini Mental Health Survey Form</h1>
+      <p id="description" class="lead">Please take a few minutes to complete this survey. Your responses will help us understand and support your mental well-being.</p>
+    </header>
+    <form id="survey-form" class="p-4 rounded shadow-lg">
+      <h2 class="mb-3">General Information</h2>
+      <div class="mb-3">
+        <label id="name-label" for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
+      </div>
+      <div class="mb-3">
+        <label id="email-label" for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+      </div>
+      <div class="mb-3">
+        <label id="number-label" for="age" class="form-label">Age:</label>
+        <input type="number" class="form-control" name="age" id="age" placeholder="Enter age" min="15" max="100" required>
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender:</label>
+        <select id="gender" class="form-select" required>
+          <option disabled selected value>Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="unknown">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <h2 class="mb-3">Current Mood and Emotions</h2>
+      <div class="mb-3">
+        <p>How have you been feeling in general over the past two weeks? (Check all that apply)</p>
+        <div class="form-check">
+          <input name="feeling" value="happy" type="checkbox" class="form-check-input" id="happy">
+          <label class="form-check-label" for="happy">Happy</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="anxious" type="checkbox" class="form-check-input" id="anxious">
+          <label class="form-check-label" for="anxious">Anxious</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="depressed" type="checkbox" class="form-check-input" id="depressed">
+          <label class="form-check-label" for="depressed">Depressed</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="stressed" type="checkbox" class="form-check-input" id="stressed">
+          <label class="form-check-label" for="stressed">Stressed</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="content" type="checkbox" class="form-check-input" id="content">
+          <label class="form-check-label" for="content">Content</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="irritable" type="checkbox" class="form-check-input" id="irritable">
+          <label class="form-check-label" for="irritable">Irritable</label>
+        </div>
+        <div class="form-check">
+          <input name="feeling" value="other" type="checkbox" class="form-check-input" id="other">
+          <label class="form-check-label" for="other">Other</label>
+        </div>
+      </div>
+      <h2 class="mb-3">Sleep Patterns</h2>
+      <div class="mb-3">
+        <p>How many hours of sleep do you typically get each night?</p>
+        <div class="form-check">
+          <input name="hours" value="4" type="radio" class="form-check-input" id="hours4">
+          <label class="form-check-label" for="hours4">Less than 4 hours</label>
+        </div>
+        <div class="form-check">
+          <input name="hours" value="6" type="radio" class="form-check-input" id="hours6">
+          <label class="form-check-label" for="hours6">4-6 hours</label>
+        </div>
+        <div class="form-check">
+          <input name="hours" value="8" type="radio" class="form-check-input" id="hours8">
+          <label class="form-check-label" for="hours8">6-8 hours</label>
+        </div>
+        <div class="form-check">
+          <input name="hours" value="more" type="radio" class="form-check-input" id="hoursMore">
+          <label class="form-check-label" for="hoursMore">More than 8 hours</label>
+        </div>
+      </div>
+      <h2 class="mb-3">Comments</h2>
+      <div class="mb-3">
+        <p>Is there anything else you would like to share about your mental health or well-being?</p>
+        <textarea id="comment" class="form-control" name="comment" placeholder="Enter your text here..." rows="4"></textarea>
+      </div>
+      <div class="d-grid">
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    background: #ffffff; /* Background of the page is white */
+    color: #000000; /* Text color is black for contrast */
+    font-family: Tahoma, sans-serif;
+  }
+
+  h1, h2 {
+    color: #025738;
+  }
+
+  #survey-form {
+    background: #ffffff; /* Form box background is white */
+    color: #000000; /* Text color inside the form is black */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  }
+
+  .form-label {
+    font-weight: 600;
+  }
+
+  #submit {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  #submit:hover {
+    background-color: #0056b3;
+  }
+</style>
